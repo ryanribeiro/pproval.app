@@ -6,15 +6,15 @@
       th:object="${submission}" method="post">
   <div class="field">
     <label>Article</label>
-    <textarea></textarea>
+    <textarea type="text" th:field="*{article}"></textarea>
   </div>
   <div class="field">
     <label>Title</label>
-    <input type="text" th:action="" placeholder="Title">
+    <input type="text" th:field="*{name}" placeholder="Title">
   </div>
   <div class="field">
     <label>Author</label>
-    <input type="text" name="last-name" placeholder="Author">
+    <input type="text" th:field="*{author}" placeholder="Author">
   </div>
   <button class="ui button" type="submit">Submit</button>
 </form>
