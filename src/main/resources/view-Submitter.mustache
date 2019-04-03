@@ -1,0 +1,18 @@
+{{>includes/header}}
+<html xmlns:th="http://www.thymeleaf.org">
+<table class="ui celled table">
+  <thead>
+  <th>Title</th>
+  <th>Author</th>
+  <th>Status</th>
+  <th>Article</th>
+  </thead>
+  <tr th:each="article:${articles}">
+    <td> <span th:text="${article.name}"> </span> </td>
+    <td> <span th:text="${article.author}"> </span> </td>
+    <td> <span th:text="${article.status}"> </span> </td>
+    <td> <span th:text="${article.content}"> </span> </td>
+  </tr>
+</table>
+</html>
+{{>includes/footer}}

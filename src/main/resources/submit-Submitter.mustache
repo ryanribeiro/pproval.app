@@ -1,0 +1,22 @@
+{{>includes/header}}
+<html xmlns:th="http://www.thymeleaf.org">
+<h1>Article Submission</h1>
+<p>Copy and paste your article into the space below.</p>
+<form class="ui form" th:action="@{/submit-Submitter}"
+      th:object="${submission}" method="post">
+  <div class="field">
+    <label>Article</label>
+    <textarea></textarea>
+  </div>
+  <div class="field">
+    <label>Title</label>
+    <input type="text" th:action="" placeholder="Title">
+  </div>
+  <div class="field">
+    <label>Author</label>
+    <input type="text" name="last-name" placeholder="Author">
+  </div>
+  <button class="ui button" type="submit">Submit</button>
+</form>
+</html>
+{{>includes/footer}}

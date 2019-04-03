@@ -6,7 +6,6 @@ import lombok.*;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @Entity
 public class Article {
   @Id
@@ -31,6 +30,13 @@ public class Article {
     this.author = author;
     this.name = name;
     this.article = article;
+    this.status = Status.SUBMITTED;
+  }
+
+  public Article () {
+    this.author = "Temp";
+    this.name = "Temp";
+    this.article = "Temp";
     this.status = Status.SUBMITTED;
   }
 }
